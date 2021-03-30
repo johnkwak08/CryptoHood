@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration:none;
+    box-sizing: border-box;
+    background-color: rgba(28, 25, 25, 0.755);
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ----Coins List CSS---- */
+
+  /* .coin-all {
+    height: 750px;
+    overflow: scroll;
+  } */
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .coin-line {
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    align-items: center;
+    height: 100px;
+    width: 800px;
+    border-bottom: 1px solid grey;
+  }
+
+  .coin-line-single {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    min-width: 400px;
+  }
+
+  .coin-line-symbol {
+    text-transform: uppercase;
+    margin-left: 50px;
+    color: aliceblue;
+  }
+
+  .coin-line-info {
+    display: flex;
+    text-align: center;
+    justify-items: space-between;
+    width: 100%;
+  }
+
+  .coin-line-single img {
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+  }
+
+  .coin-line-price {
+    width: 150px;
+    color: aliceblue;
+  }
+
+  .coin-line-down {
+    color: red;
+    width: 175px;
+  }
+
+  .coin-line-up {
+    color: green;
+    width: 175px;
+  }
+
+  .coin-line-single h2 {
+    font-size: 20px;
+    width: 2000px;
+    margin-left: 15px;
+    cursor: pointer;
+    color: aliceblue;
+  }
+
+
+  /* ----App CSS---- */
+
+.title {
+  display: inline-block;
+  color: aliceblue;
+  background-color: grey;
+}
+
+.pages-home {
+  display: flex;
+  float: right;
+  margin-right: 50px;
+  cursor: pointer;
+  color: aliceblue;
+  background-color: grey;
+}
+
+.pages-port {
+  display: flex;
+  float: right;
+  cursor: pointer;
+  color: aliceblue;
+  background-color: grey;
+}
+
+.coin-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 75px;
+}
+
+.coin-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: aliceblue;
+  font-size: 25px;
+}
+
+.header {
+  padding: 25px;
+  background-color: grey;
+}
+
+.coin-input {
+  margin: 15px;
+  width: 350px;
+  height: 50px;
+  border-radius: 2px;
+  border: 1px solid aliceblue;
+  font-size: 15px;
+  color: aliceblue;
+}
