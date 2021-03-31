@@ -2,12 +2,11 @@
 import React from 'react';
 
 const DisplayCoin = ({ name, image, symbol, price, priceChange }) => {
-  console.log('eslint');
   return (
     <div className="container">
       <div className="coin-line">
         <div className="coin-line-single">
-          <img src={image} alt="img"/>
+          <img src={image} alt="img" />
           <h2>{name}</h2>
           <div className="coin-line-symbol">{symbol}</div>
         </div>
