@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import DisplayCoin from './DisplayCoin';
+import { WatchListDataContext } from './WatchListData';
 
-const CoinList = (props) => {
+const CoinList = () => {
   const [coinList, setCoinList] = useState([]);
   const [coinInput, setCoinInput] = useState('');
-
-  useEffect(() => {
-    getData();
-  }, []);
+  const { handleAdd } = useContext(WatchListDataContext);
 
   const getData = () => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+    axios.get('/coins')
       .then(({ data }) => {
         setCoinList(data);
       })
       .catch((err) => console.log('error getting data', err));
   };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   const filterCoins = coinList.filter(
     (coin) => coin.name.toLowerCase().includes(coinInput.toLowerCase()),
@@ -25,7 +27,7 @@ const CoinList = (props) => {
   return (
     <div>
       <div className="coin-list">
-        <h4 className="coin-search">Search your crypto here</h4>
+        <h4 className="coin-search">Search Here</h4>
         <form>
           <input
             className="coin-input"
@@ -38,11 +40,13 @@ const CoinList = (props) => {
           {filterCoins.map((coins) => (
             <DisplayCoin
               key={coins.id}
+              id={coins.id}
               name={coins.name}
               image={coins.image}
               symbol={coins.symbol}
               price={coins.current_price}
               priceChange={coins.price_change_percentage_24h}
+              handleAdd={handleAdd}
             />
           ))}
         </div>

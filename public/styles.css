@@ -8,17 +8,12 @@
   }
   
   body {
-    font-family: 'Lato', sans-serif;
+    font-family: Consolas, monaco, monospace;
     margin: 0;
     padding: 0;
   }
 
   /* ----Coins List CSS---- */
-
-  /* .coin-all {
-    height: 750px;
-    overflow: scroll;
-  } */
 
   .container {
     display: flex;
@@ -80,8 +75,17 @@
     font-size: 20px;
     width: 2000px;
     margin-left: 15px;
+    color: aliceblue;
+  }
+
+  .plus-icon- {
     cursor: pointer;
     color: aliceblue;
+  }
+
+  .plus-icon-active {
+    cursor: pointer;
+    color: green;
   }
 
 
@@ -89,8 +93,8 @@
 
 .title {
   display: inline-block;
-  color: aliceblue;
   background-color: grey;
+  color: #82CAFA;
 }
 
 .pages-home {
@@ -98,16 +102,16 @@
   float: right;
   margin-right: 50px;
   cursor: pointer;
-  color: aliceblue;
   background-color: grey;
+  color: #82CAFA;
 }
 
 .pages-port {
   display: flex;
   float: right;
   cursor: pointer;
-  color: aliceblue;
   background-color: grey;
+  color: #82CAFA;
 }
 
 .coin-list {
@@ -123,12 +127,16 @@
   justify-content: center;
   align-content: center;
   color: aliceblue;
-  font-size: 25px;
+  font-size: 45px;
+  font-family: "Brush Script MT", cursive;
 }
 
 .header {
   padding: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
   background-color: grey;
+  font-family: "Brush Script MT", cursive;
 }
 
 .coin-input {
@@ -137,6 +145,28 @@
   height: 50px;
   border-radius: 2px;
   border: 1px solid aliceblue;
-  font-size: 25px;
+  font-size: 30px;
+  justify-content: center;
   color: aliceblue;
+  font-family: "Brush Script MT", cursive;
 }
+
+.logo {
+  width: 35px;
+  height: 35px;
+  background-color: grey;
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.watch-list {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: aliceblue;
+  font-size: 45px;
+  font-family: "Brush Script MT", cursive;
+  margin-top: 75px;
+}
+

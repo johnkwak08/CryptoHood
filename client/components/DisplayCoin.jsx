@@ -1,7 +1,17 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
-const DisplayCoin = ({ name, image, symbol, price, priceChange }) => {
+const DisplayCoin = ({ id, name, image, symbol, price, priceChange, handleAdd }) => {
+  const [active, setActive] = useState('');
+  const icon = <FontAwesomeIcon icon={faPlus} />;
+
+  const handleCoinAdd = () => {
+    setActive(active === '' ? 'active' : '');
+    handleAdd(id);
+  };
+
   return (
     <div className="container">
       <div className="coin-line">
@@ -17,6 +27,7 @@ const DisplayCoin = ({ name, image, symbol, price, priceChange }) => {
             : (<div className="coin-line-down">Daily Price Change {priceChange.toFixed(2)}% </div>)
           }
         </div>
+        <div className={`plus-icon-${active}`} onClick={handleCoinAdd}>{icon}</div>
       </div>
     </div>
   );

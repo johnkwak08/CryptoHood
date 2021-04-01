@@ -3,18 +3,20 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import CoinList from './CoinList';
 import Header from './Header';
 import WatchList from './WatchList';
-// import axios from 'axios';
+import ChartData from './ChartData';
+import { WatchListDataContextProvider } from './WatchListData';
 
-const App = (props) => {
-  return (
-    <div>
+const App = () => (
+  <div>
+    <WatchListDataContextProvider>
       <BrowserRouter>
-      <Header />
+        <Header />
         <Route exact path="/" component={CoinList} />
         <Route exact path="/WatchList" component={WatchList} />
+        <Route exact path="/WatchList/:id" component={ChartData} />
       </BrowserRouter>
-    </div>
-  );
-};
+    </WatchListDataContextProvider>
+  </div>
+);
 
 export default App;
